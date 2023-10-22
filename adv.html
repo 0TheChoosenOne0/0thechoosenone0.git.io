@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adv. Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+<body>
+    <nav class="navbar fixed-top navbar-light bg-light" >
+		<a class="navbar-brand" href="index.html">
+		  <img src="bug-fill.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+		  NextGen
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="index.html"><span class="sr-only">(current)</span></a>
+			  <img src="house.svg" width="20" height="30" class="d-inline-block align-top" alt="">
+			  Início
+		  
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<img src="joystick.svg" width="20" height="30" class="d-inline-block align-top">
+				Jogos
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="quiz.html"> Quizz</a>
+				<a class="dropdown-item" href="adv.html">Adv. Game</a>    
+		<a class="dropdown-item" href="adv_num.html">Adv. Num</a>
+		<a class="dropdown-item" href="tibet_test.html">Teste De Personalidade</a>
+				<a class="dropdown-item" href="sort.html">Sorteio</a>
+			  
+				<li class="nav-item dropdown sm-icons">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="github.svg" width="20" height="30" class="d-inline-block align-top">
+					Devs
+				  </a>
+				  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#"> Mateus</a>
+					<a class="dropdown-item" href="https://github.com/0TheChoosenOne0">Kayo</a>    
+				  
+			  </div>
+			</li>
+		  </ul>
+		</div>
+	  </nav> 
+	  <header>
+		<br>
+		<br>
+	  </header>
+	  <h1 class="font-weight-bold d-block p-2 bg-primary text-white text-center">Guessing Game</h1>
+<script>
+
+
+document.write('<form name="guess" method="get">');
+document.write('<img src="img principal.jpeg" border="5px" heigth="70%" width="100%" height="70%" title="Role para baixo"/><br> ');
+document.write('<br><h3 class="font-weight-bold d-block p-2 bg-primary text-white text-center""> Escolha abaixo as cartas em que sua imagem aparece. </h3><br>');
+document.write('<img src="carta 1.jpeg" heigth="70%" width="100%" height="70%" /> ');
+document.write('<div class="custom-control custom-radio">')
+      document.write('<input type="radio" id="01" name="op1" value="Sim" class="custom-control-input">');
+        document.write(' <label class="custom-control-label" for="01">Sim</label>');
+       document.write('</div>');
+	   document.write('<div class="custom-control custom-radio">')
+                         document.write('<input type="radio" id="02" name="op1" value="Não"class="custom-control-input">');
+                          document.write(' <label class="custom-control-label" for="02">Não</label>');
+                          document.write('</div>');
+			document.write('<img src="carta 2.jpeg" heigth="70%" width="100%" height="70%" /> ');
+			document.write('<div class="custom-control custom-radio">')
+                         document.write('<input type="radio" id="03" name="op2" value="Sim"class="custom-control-input">');
+                          document.write(' <label class="custom-control-label" for="03">Sim</label>');
+                          document.write('</div>');
+						  document.write('<div class="custom-control custom-radio">')
+                         document.write('<input type="radio" id="04" name="op2" value="Não"class="custom-control-input">');
+                          document.write(' <label class="custom-control-label" for="04">Não</label>');
+                          document.write('</div>');
+			document.write('<img src="carta 3.jpeg" heigth="70%" width="100%" height="70%" /> ');
+			document.write('<div class="custom-control custom-radio">')
+                         document.write('<input type="radio" id="05" name="op3" value="Sim"class="custom-control-input">');
+                          document.write(' <label class="custom-control-label" for="05">Sim</label>');
+                          document.write('</div>');
+						  document.write('<div class="custom-control custom-radio">')
+                         document.write('<input type="radio" id="06" name="op3" value="Não"class="custom-control-input">');
+                          document.write(' <label class="custom-control-label" for="06">Não</label>');
+                          document.write('</div>');
+			document.write('<img src="carta 4.jpeg" heigth="70%" width="100%" height="70%" /> ');
+			document.write('<div class="custom-control custom-radio">')
+                         document.write('<input type="radio" id="07" name="op4" value="Sim"class="custom-control-input">');
+                          document.write(' <label class="custom-control-label" for="07">Sim</label>');
+                          document.write('</div>');
+						  document.write('<div class="custom-control custom-radio">')
+                         document.write('<input type="radio" id="08" name="op4" value="Não"class="custom-control-input">');
+                          document.write(' <label class="custom-control-label" for="08">Não</label>');
+                          document.write('</div>');
+			document.write('<input type="button" class="btn btn-success" id="botao" name="ver" value="Resultado" onclick="resps()">');
+			document.write('<input type="reset" class="btn btn-light" id="botao" name="clear" value="Resetar">');
+			document.write('</form> </center>');
+
+			function resps()
+			{
+				var posicao=0;
+				var resp1=document.guess.op1.value;
+				var resp2=document.guess.op2.value;
+				var resp3=document.guess.op3.value;
+				var resp4=document.guess.op4.value;
+
+				if(resp1 == "Sim") posicao=posicao+1;
+				if(resp2 == "Sim") posicao=posicao+2;
+				if(resp3 == "Sim") posicao=posicao+8;
+				if(resp4 == "Sim") posicao=posicao+4;
+			
+				if(posicao>0)
+				{
+					document.write('<center><h2 class="font-weight-bold d-block p-2 bg-primary text-white"> A imagem que você pensou foi: </h2> <br>');
+						if(posicao == 1){document.write('<img src="img 1.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 2){document.write('<img src="img 4.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 3){document.write('<img src="img 2.jfif" heigth="70%" width="100%" />');};
+						if(posicao == 4){document.write('<img src="img 3.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 5){document.write('<img src="img 5.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 6){document.write('<img src="img 6.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 7){document.write('<img src="img 7.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 8){document.write('<img src="img 8.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 9){document.write('<img src="img 9.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 10){document.write('<img src="img 10.jfif" heigth="70%" width="100%" />');};
+						if(posicao == 11){document.write('<img src="img 11.jfif" heigth="70%" width="100%" />');};
+						if(posicao == 12){document.write('<img src="img 12.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 13){document.write('<img src="img 13.jpg" heigth="70%" width="100%" />');};
+						if(posicao == 14){document.write('<img src="img 14.jfif" heigth="70%" width="100%" />');};
+						if(posicao == 15){document.write('<img src="img 15.jfif" heigth="70%" width="100%" />');};
+						document.write(' <a href="adv.html"><button class="btn btn-outline-secondary col-lg-12">Tentar Novamente</button></a>');
+						document.write('</center>')
+				}
+				else alert('VOCÊ NÃO ESCOLHEU NENHUMA CARTA!!!');
+			}
+</script>
+</body>
+</html>

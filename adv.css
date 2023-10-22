@@ -1,0 +1,29 @@
+.btn:hover
+{
+    background-color: whitesmoke;
+}
+
+.j-modal
+{
+    width: 45%;
+    height: 60%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#modal
+{
+width: 60%;
+min-width: 450px;
+min-height: 200px;
+background-color: whitesmoke;
+backdrop-filter: blur();
+padding: 50px;
+border-radius: 20px;
+}

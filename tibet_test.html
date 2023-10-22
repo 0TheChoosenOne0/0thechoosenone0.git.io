@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" media="all" href="tibet.css">
+	<title>Teste De Personalidade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-light bg-light" >
+		<a class="navbar-brand" href="index.html">
+		  <img src="bug-fill.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+		  NextGen
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="index.html"><span class="sr-only">(current)</span></a>
+			  <img src="house.svg" width="20" height="30" class="d-inline-block align-top" alt="">
+			  Início
+		  
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<img src="joystick.svg" width="20" height="30" class="d-inline-block align-top">
+				Jogos
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="quiz.html"> Quizz</a>
+				<a class="dropdown-item" href="adv.html">Adv. Game</a>    
+		<a class="dropdown-item" href="adv_num.html">Adv. Num</a>
+		<a class="dropdown-item" href="tibet_test.html">Teste De Personalidade</a>
+				<a class="dropdown-item" href="sort.html">Sorteio</a>
+			  
+				<li class="nav-item dropdown sm-icons">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="github.svg" width="20" height="30" class="d-inline-block align-top">
+					Devs
+				  </a>
+				  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#"> Mateus</a>
+					<a class="dropdown-item" href="https://github.com/0TheChoosenOne0">Kayo</a>    
+				  
+			  </div>
+			</li>
+		  </ul>
+		</div>
+	  </nav> 
+      <header>
+        <br><p>           </p>
+      </header>
+      <br>
+
+      <div class="container text-center">
+        <h1 class="font-weight-bold d-block p-2 bg-primary text-white text-center">Teste De Personalidade</h1>
+      </div>
+      <div class="container text-center">
+        <ul id="quiz" class="list-group">
+    
+        </ul>
+      </div>
+    
+     
+    
+      <div class="container text-center results hide">
+        <p id="results"></p>
+      </div>
+    
+      <div class="container text-center bottom">
+        <button id="submit-btn" class="btn btn-primary btn-lg">Enviar</button>
+    
+        <button id="retake-btn" class="hide btn btn-primary btn-lg">Refazer</button>
+      </div>
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+     
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+    </body>
+    </html>
+      <script>
+var prompts = [
+{
+	prompt: 'Tenho dificuldade em me apresentar às pessoas',
+	weight: -1,
+	class: 'group0'
+},
+{
+	prompt: 'Fico tão perdido em meus pensamentos que ignoro ou esqueço o que me rodeia',
+	weight: -1,
+	class: 'group1'
+},
+{
+	prompt: 'Eu normalmente não inicio conversas',
+	weight: -1,
+	class: 'group2'
+},
+{
+	prompt: 'Prefiro não me envolver com pessoas que parecem zangadas ou chateadas',
+	weight: -1,
+	class: 'group3'
+},
+{
+	prompt: 'Eu escolho meus amigos com cuidado',
+	weight: -1,
+	class: 'group4'
+},
+{
+	prompt: 'Acho difícil contar histórias sobre mim',
+	weight: -1,
+	class: 'group5'
+},
+{
+	prompt: 'Geralmente sou altamente motivado e enérgico',
+	weight: 1,
+	class: 'group6'
+},
+{
+	prompt: 'Acho fácil me aproximar de um grupo de pessoas e participar de uma conversa',
+	weight: 1,
+	class: 'group7'
+},
+{
+	prompt: 'Ser adaptável é mais importante do que ser organizado',
+	weight: 1,
+	class: 'group8'
+},
+{
+	prompt: 'Preocupo-me mais em garantir que ninguém fique chateado do que em ganhar um debate',
+	weight: 1,
+	class: 'group9'
+},
+{
+	prompt: 'Muitas vezes não sinto que tenho que me justificar perante as pessoas',
+	weight: 1,
+	class: 'group10'
+},
+{
+	prompt: 'Prefiro improvisar do que perder tempo elaborando um plano detalhado',
+	weight: 1,
+	class: 'group11'
+}
+
+]
+
+
+var prompt_values = [
+{
+	value: 'Concordo plenamente', 
+	class: 'btn-default btn-strongly-agree',
+	weight: 5
+},
+{
+	value: 'Concordo',
+	class: 'btn-default btn-agree',
+	weight: 3,
+}, 
+{
+	value: 'Neutro', 
+	class: 'btn-default',
+	weight: 0
+},
+{
+	value: 'Discordo',
+	class: 'btn-default btn-disagree',
+	weight: -3
+},
+{ 
+	value: 'Discordo plenamente',
+	class: 'btn-default btn-strongly-disagree',
+	weight: -5
+}
+]
+
+function createPromptItems() {
+
+	for (var i = 0; i < prompts.length; i++) {
+		var prompt_li = document.createElement('li');
+		var prompt_p = document.createElement('p');
+		var prompt_text = document.createTextNode(prompts[i].prompt);
+
+		prompt_li.setAttribute('class', 'list-group-item prompt');
+		prompt_p.appendChild(prompt_text);
+		prompt_li.appendChild(prompt_p);
+
+		document.getElementById('quiz').appendChild(prompt_li);
+	}
+}
+
+
+function createValueButtons() {
+	for (var li_index = 0; li_index < prompts.length; li_index++) {
+		var group = document.createElement('div');
+		group.className = 'btn-group btn-group-justified';
+
+		for (var i = 0; i < prompt_values.length; i++) {
+			var btn_group = document.createElement('div');
+			btn_group.className = 'btn-group';
+
+			var button = document.createElement('button');
+			var button_text = document.createTextNode(prompt_values[i].value);
+			button.className = 'group' + li_index + ' value-btn btn ' + prompt_values[i].class;
+			button.appendChild(button_text);
+
+			btn_group.appendChild(button);
+			group.appendChild(btn_group);
+
+			document.getElementsByClassName('prompt')[li_index].appendChild(group);
+		}
+	}
+}
+
+createPromptItems();
+createValueButtons();
+
+
+var total = 0;
+
+
+function findPromptWeight(prompts, group) {
+	var weight = 0;
+
+	for (var i = 0; i < prompts.length; i++) {
+		if (prompts[i].class === group) {
+			weight = prompts[i].weight;
+		}
+	}
+
+	return weight;
+}
+
+
+function findValueWeight(values, value) {
+	var weight = 0;
+
+	for (var i = 0; i < values.length; i++) {
+		if (values[i].value === value) {
+			weight = values[i].weight;
+		}
+	}
+
+	return weight;
+}
+
+ 
+$('.value-btn').mousedown(function () {
+	var classList = $(this).attr('class');
+	
+	var classArr = classList.split(" ");
+	
+	var this_group = classArr[0];
+	
+
+	
+	if($(this).hasClass('active')) {
+		$(this).removeClass('active');
+		total -= (findPromptWeight(prompts, this_group) * findValueWeight(prompt_values, $(this).text()));
+	} else {
+		
+		total -= (findPromptWeight(prompts, this_group) * findValueWeight(prompt_values, $('.'+this_group+'.active').text()));
+		
+		$('.'+this_group).removeClass('active');
+
+	
+		$(this).addClass('active');
+		total += (findPromptWeight(prompts, this_group) * findValueWeight(prompt_values, $(this).text()));
+	}
+
+	console.log(total);
+})
+
+
+
+$('#submit-btn').click(function () {
+	
+	$('.results').removeClass('hide');
+	$('.results').addClass('show');
+	
+	if(total < 0) {
+		
+		document.getElementById('results').innerHTML = '<b>Você é introvertido!</b><br><br>\
+		Os introvertidos são difíceis de entender, pois é muito fácil presumirmos que introversão é o mesmo que ser tímido, quando, na verdade, os introvertidos são simplesmente pessoas que acham cansativo estar perto de outras pessoas.\n\
+<br><br>\
+Para os introvertidos, ficar sozinho com nossos pensamentos é tão restaurador quanto dormir, tão nutritivo quanto comer.\n\n\
+<br><br>\
+Pessoas introvertidas são conhecidas por pensar nas coisas antes de falar, desfrutar de grupos pequenos e próximos de amigos e de momentos individuais, precisar de um tempo sozinho para recarregar as energias e ficar chateado com mudanças inesperadas ou surpresas de última hora. Os introvertidos não são necessariamente tímidos e podem nem evitar situações sociais, mas definitivamente precisarão de algum tempo sozinhos ou apenas com amigos próximos ou familiares depois de passarem um tempo no meio de uma grande multidão.\
+		';
+	} else if(total > 0) {
+		document.getElementById('results').innerHTML = '<b>Você é extrovertido!</b><br><br>\
+		No lado oposto da moeda, as pessoas extrovertidas são energizadas pelas pessoas. Eles geralmente gostam de passar tempo com outras pessoas, pois é assim que se recarregam do tempo que passam sozinhos, concentrando-se ou trabalhando duro.\
+<br><br>\
+Quando estou entre pessoas, faço contato visual, sorrio, talvez converso se houver oportunidade (como ficar preso em uma longa fila do supermercado). Como extrovertido, isso é um pequeno ‘pico’ de energia, um pequeno momento positivo do dia.';
+	} else {
+		document.getElementById('results').innerHTML = '<b>Você é ambivertido!</b><br><br>\
+		Como introvertidos e extrovertidos são os extremos da escala, o resto de nós fica em algum lugar no meio. Muitos de nós inclinamo-nos para um lado ou para outro, mas há alguns que estão bastante equilibrados entre as duas tendências. Essas pessoas são chamadas de ambivertidos.\
+<br><br>\
+Os ambivertidos exibem tendências extrovertidas e introvertidas. Isso significa que eles geralmente gostam de estar perto de pessoas, mas depois de muito tempo isso começará a esgotá-los. Da mesma forma, gostam de solidão e sossego, mas não por muito tempo. Os ambivertidos recarregam seus níveis de energia com uma mistura de interação social e tempo a sós.'
+	}
+
+
+	$('#quiz').addClass('hide');
+	$('#submit-btn').addClass('hide');
+	$('#retake-btn').removeClass('hide');
+})
+
+
+$('#retake-btn').click(function () {
+	$('#quiz').removeClass('hide');
+	$('#submit-btn').removeClass('hide');
+	$('#retake-btn').addClass('hide');
+
+	$('.results').addClass('hide');
+	$('.results').removeClass('show');
+})
+</script>
+</body>
+</html>

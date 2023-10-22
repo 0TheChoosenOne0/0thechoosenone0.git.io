@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" media="all" href="sort.css">
+	<title>Sorteio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-light bg-light" >
+    <a class="navbar-brand" href="index.html">
+      <img src="bug-fill.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+      NextGen
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"><span class="sr-only">(current)</span></a>
+          <img src="house.svg" width="20" height="30" class="d-inline-block align-top" alt="">
+          Início
+      
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="joystick.svg" width="20" height="30" class="d-inline-block align-top">
+            Jogos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="quiz.html"> Quizz</a>
+            <a class="dropdown-item" href="adv.html">Adv. Game</a>    
+    <a class="dropdown-item" href="adv_num.html">Adv. Num</a>
+    <a class="dropdown-item" href="tibet_test.html">Teste De Personalidade</a>
+            <a class="dropdown-item" href="sort.html">Sorteio</a>
+          
+            <li class="nav-item dropdown sm-icons">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="github.svg" width="20" height="30" class="d-inline-block align-top">
+                Devs
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#"> Mateus</a>
+                <a class="dropdown-item" href="https://github.com/0TheChoosenOne0">Kayo</a>    
+              
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav> 
+      <header>
+        <br><p>           </p>
+      </header>
+      <br>
+
+      <div class="content">
+        <div class="input-group mb-6">
+          <div class="input-group-prepend">
+</div>
+        </div>
+        <h1 class="font-weight-bold text-center d-block p-2 bg-primary text-white"> Escolha um Número de 1 à 100 </h1>
+        <input type="number" id="bet3" class="form-control form-control-line col-lg-12"  placeholder="Digite Um Número:">
+
+        <button onclick="identifyNumber3()" class="btn btn-outline-success col-lg-12" type="submit">Enviar</button>
+        <a href="sort.html"><button class="btn btn-outline-secondary col-lg-12">Voltar</button></a>
+
+        
+    </div>
+
+    <script>
+   var numberToFind3 = 0;
+    var attempts3 = 0;
+
+    
+    function refresh3()
+    {
+      numberToFind3 = parseInt(Math.random() * 100);
+        console.log(numberToFind3);
+    }
+    function identifyNumber3()
+    {
+        var bet3 = document.getElementById('bet3').value;
+        if(bet3 > 100 || bet3 < 1)
+        {
+          alert('Numero Inválido, Tente novamente');
+          return;
+        }
+
+        else if (bet3 < numberToFind3)
+        {
+          attempts3++;
+            alert('Ops, Parece que o chute é menor do que o número sorteado, tente novamente.');
+        }
+
+        else if (bet3 > numberToFind3)
+        {
+          attempts3++;
+            alert('Ops, Parece que o chute é maior do que o número sorteado, tente novamente.');
+        }
+
+        
+        else
+        {
+            alert("Parabéns, Você acertou, o número sorteado era: " + numberToFind3 + " Você acertou com um total de: " + attempts3+ " Tentativas");
+            
+        };
+
+        if(attempts3 = 10)
+        {
+          alert("Parece que você precisa de ajuda? O número sorteado é a metade de: " + (numberToFind3) * 2);
+        }
+
+        if(bet3 == numberToFind3)
+        {
+          refresh3();
+        }
+        
+
+        
+    }
+
+    refresh3();
+    </script>
